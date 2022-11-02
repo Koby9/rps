@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-
+        //Randomly generates a choice
         function getComputerChoice() {
             let randomNumber = Math.floor(Math.random() * 3)
             switch (randomNumber) {
@@ -21,12 +21,13 @@
             }
             
         }
-
+        //Asks a player for their choice
         function getPlayerChoice(){
             let userInput = prompt("Rock, Paper, or Scissors?")
             return userInput.toLowerCase();
         }
-    
+        
+        //Main game loop
         function game(){
             for (let i = 0; i < 5; i++){
                 let playerSelection = getPlayerChoice();
@@ -51,9 +52,7 @@
         }
         
         game();
-       
-        
-    
+
     </script>
 </body>
 </html>
