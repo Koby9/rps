@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    border: 0 none;
+    padding: 10px;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+.header {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+}
+
+.player-score {
+    text-align: center;
+    padding: 20px;
+}
+
+.comp-score {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.choices div {
+    padding: 0px 30px 0px 30px;
+}
+
+.choice {
+    font-weight: bolder;
+}

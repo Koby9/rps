@@ -5,54 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script>
-        //Randomly generates a choice
-        function getComputerChoice() {
-            let randomNumber = Math.floor(Math.random() * 3)
-            switch (randomNumber) {
-            case 0:
-            return 'rock'
-            case 1:
-            return 'paper'
-            case 2:
-            return 'scissors'
-            }
-            
-        }
-        //Asks a player for their choice
-        function getPlayerChoice(){
-            let userInput = prompt("Rock, Paper, or Scissors?")
-            return userInput.toLowerCase();
-        }
-        
-        //Main game loop
-        function game(){
-            for (let i = 0; i < 5; i++){
-                let playerSelection = getPlayerChoice();
-                let computerSelection = getComputerChoice();
-                console.log("Computer: " + computerSelection);
-                console.log("Player: " + playerSelection);
-                if (playerSelection === computerSelection){
-                    alert("You tied this round!");
-                }
-                else if (playerSelection === "scissors" && computerSelection === "paper" || 
-                playerSelection === "paper" && computerSelection === "rock" || 
-                playerSelection === "rock" && computerSelection === "scissors") {
-                    alert("You win this round!");
-                }
-                else if (playerSelection === "paper" && computerSelection === "scissors" || 
-                playerSelection === "rock" && computerSelection === "paper" || 
-                playerSelection === "scissors" && computerSelection === "rock") {
-                    alert("You lose this round!")
-                }
-            }
-            
-        }
-        
-        game();
-
-    </script>
+    <h1 class="header">Rock, Paper, Scissors VS Sentient A.I.</h1>
+    <div class="choices">
+        <div>
+            <div class="choice">Your Choice: </div>
+            <div id="player-choice"></div>
+        </div>
+        <div>
+            <div class="choice">A.I.'s Choice: </div>
+            <div id="comp-choice"></div>
+        </div>
+    </div>
+    <h2>Who Will Win?</h2>
+    <div class="scores">
+        <div class="player-score">
+            <h3>Your Score</h3>
+            <div class="p-score">0</div>
+        </div>
+        <div class="comp-score">
+            <h3>Sentient A.I. Score</h3>
+            <div class="c-score">0</div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
 </body>
 </html>
